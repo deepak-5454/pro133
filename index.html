@@ -1,0 +1,22 @@
+<!-- templates/family_members.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Members</title>
+</head>
+<body>
+    <h2>Family Members</h2>
+    <ul>
+        {% for member in family_members %}
+            <li>
+                <strong>Name:</strong> {{ member.name }}<br>
+                <strong>Age:</strong> {{ member.age }}<br>
+                <img src="{{ member.picture }}" alt="{{ member.name }}'s picture" width="100">
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('first_flask') }}">Back to Home</a>
+</body>
+</html>
